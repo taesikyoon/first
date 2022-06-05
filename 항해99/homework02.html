@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mytitle {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTEyMjVfOTQg%2FMDAxNjQwNDExNDk2NjIz.71oon1jI4tTYTq1vjEwSs89QsJLHfJerW6MPdxtbHOAg.3X7ZvLIEjw-oL1fIPYA4yfGuFIQOuG4k7SUi9SKqB3kg.JPEG.infinitenote%2F%25BF%25A5%25BD%25BA%25C5%25D7_%25C6%25AE%25C0%25AD.jpg&type=a340");
+            background-size: contain;
+            background-position: center;
+
+            color: azure;
+
+            height: 200px;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .mypost {
+            max-width: 500px;
+            width: 95%;
+            margin: 20px auto 0px auto;
+
+            box-shadow: 0px 0px 3px 0px gray;
+            padding: 20px;
+
+        }
+
+        .mypost > button {
+            margin-top: 15px;
+        }
+
+        .mycards {
+            max-width: 500px;
+            width: 95%;
+            margin: 20px auto 0px auto;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            alert('다 로딩됐다!')
+        });
+        $.ajax({
+            type: "GET",
+            url: "http://spartacodingclub.shop/sparta_api/weather/ansan",
+            data: {},
+            success: function (response) {
+                let html_temp = response['temp']
+                $('#temp').append(html_temp)
+            }
+        })
+    </script>
+</head>
+
+<body>
+<div class="mytitle">
+    <h1>트와이스 팬명록</h1>
+    <p>현재기온 <span id="temp"></span>도</p>
+</div>
+<div class="mypost">
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">닉네임</label>
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                  style="height: 100px"></textarea>
+        <label for="floatingTextarea2">응원댓글</label>
+    </div>
+    <button type="button" class="btn btn-dark">응원남기기</button>
+
+</div>
+<div class="mycards">
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>새로운 앨범 넘우 좋아요.</p>
+                <footer class="blockquote-footer">항해 99</footer>
+            </blockquote>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>새로운 앨범 넘우 좋아요.</p>
+                <footer class="blockquote-footer">항해 99</footer>
+            </blockquote>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>새로운 앨범 넘우 좋아요.</p>
+                <footer class="blockquote-footer">항해 99</footer>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
