@@ -6,3 +6,11 @@ triangle = list(map(int,(input().split())))
 if triangle[0]+triangle[1] > triangle[2] and triangle[1]+triangle[2] > triangle[0] and triangle[2]+triangle[0] > triangle[1]:
         print('삼각형에 된다이')
 else : print('삼각형이 못되네')
+
+def solution(a,b,c):
+        answer = 'Yes'
+        if a+b > c and b+c > a and c+a > b : answer
+        else: answer = 'No'
+        return answer
+
+print(solution(23,31,12))
