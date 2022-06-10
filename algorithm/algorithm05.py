@@ -1,3 +1,4 @@
+
 # 현수네 반 선생님은 반 학생들의 수학점수를 향상시키기 위해 멘토링 시스템을 만들려고 합니
 # 다. 멘토링은 멘토(도와주는 학생)와 멘티(도움을 받는 학생)가 한 짝이 되어 멘토가 멘티의
 # 수학공부를 도와주는 것입니다.
@@ -17,37 +18,41 @@
 # ▣ 출력설명
 # 첫 번째 줄에 짝을 만들 수 있는 총 경우를 출력합니다.
 
+#   https://www.w3schools.com/python/ref_random_shuffle.asp 셔플 함수
 
+# 조건은 어떻게 맞추는지 이제 슬슬 궁금하다
 
-# 학생 수 그리구 학생의 테스트 횟수 입력받고 횟수만큼의 테스트 결과를 비교해서 짝을만들자
-# 패턴이 뭔지 생각해보자
+# M=int(input())
+# M = M if (1 <= M <= 10) else False
+# N=int(input())
+# N = N if (1 <= N <= 20) else False
 
-# 첫번째 숫자가 자기 보다 작은숫자에는 짝이 됨
-# 하지만 모든 결과에서 첫번째 숫자는 큰숫자
-# print("N명의 학생수 입력: ")
-# input_num = int(input())
-# N = input_num if(1<=input_num<=20) else False
-# print("M번의 테스트 수 입력: ")
-# input_num = int(input())
-# M = input_num if(1<=input_num<=10) else False
-# def solution(N,M):
+# def list_test(N,M):
+#     temp=[]
+#     result=[]
+#     for i in range(M):
+#         for x in range(N):
+#             temp.append(int(input()))
+#         result.extend([temp])
+#         temp=[]
+#         print("현재 리스트 보기",result)
 #
-# # 5 3 7 11 2 15 17
-list_num = [5,3,7,11,2,15,17]
-print()
-min = list_num[0]
-for x in range(1,len(list_num)):
-    print("현재 list_num[x] 값",list_num[x])
-    print("비교되는 값(min) :",min)
-    print()
-    if list_num[x] <= min :
-        min = list_num[x]
-        print("미니값이 변경되었습니다 >>>",min)
-        print()
-print("결과 값 : ",min)
+# list_test(4,3)
 
-# for x in range(1,10):
-#     print(x)
+sample=[[3, 4, 1, 2], [4, 3, 2, 1], [3, 1, 4, 2]]
+temp=[]
+for i in range(3):
+    criterion=sample[i][0]
+    # print("criterion=[",i,"]","[0]")
+    for x in range(4):
+        if criterion > sample[i][x]:
+            temp.append([criterion,sample[i][x]])
+print(temp)
+new_temp=[]
+for a in range(len(temp)):
+    if temp[a][0] > temp[a][1] :
+        new_temp.append([sample[a][0]], sample[a][1]])
+print(new_temp)
 
 
-# solution(N,M)
+# 눈이 너무 아파졌어서 해결 못하겠다... 집중도 안되고 내일 또 하는걸로!
