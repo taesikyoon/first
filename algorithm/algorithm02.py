@@ -14,3 +14,5 @@ def solution(a,b,c):
         return answer
 
 print(solution(23,31,12))
+
+#이름 정리하기! 삼각형의 조건
