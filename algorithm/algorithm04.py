@@ -37,3 +37,4 @@ def check_prime(list):
 
 print(solution(nums))
 #[32, 55, 62, 20, 250, 370, 200, 30, 100]
+# 이름변경하기 
