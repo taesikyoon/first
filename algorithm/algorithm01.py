@@ -19,4 +19,4 @@ for i in num_list:
     if i < smal:
         smal = i
 print(smal)
->>>>>>> 1ea225ce7cf0a1a5f1fd1a7ea6927d0f63ce8b53
+
