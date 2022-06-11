@@ -22,37 +22,33 @@
 
 # 조건은 어떻게 맞추는지 이제 슬슬 궁금하다
 
-# M=int(input())
-# M = M if (1 <= M <= 10) else False
-# N=int(input())
-# N = N if (1 <= N <= 20) else False
+from numpy.random import seed
+from random import shuffle
 
-# def list_test(N,M):
-#     temp=[]
-#     result=[]
-#     for i in range(M):
-#         for x in range(N):
-#             temp.append(int(input()))
-#         result.extend([temp])
-#         temp=[]
-#         print("현재 리스트 보기",result)
+# N=int(input("반 학생 수: "))
+# N = N if (1 <= N <= 20) else False
+# M=int(input("테스트 횟수: "))
+# M = M if (1 <= M <= 10) else False
 #
-# list_test(4,3)
+# seed(1)
+# test_list=[]
+# for i in range(M):
+#     test_list.extend([[1,2,3,4]])
+#     shuffle(test_list[i])
+# print(test_list)
+
+
+
 
 sample=[[3, 4, 1, 2], [4, 3, 2, 1], [3, 1, 4, 2]]
 temp=[]
-for i in range(3):
-    criterion=sample[i][0]
-    # print("criterion=[",i,"]","[0]")
-    for x in range(4):
-        if criterion > sample[i][x]:
-            temp.append([criterion,sample[i][x]])
-print(temp)
-new_temp=[]
-for a in range(len(temp)):
-    if temp[a][0] > temp[a][1] :
-        new_temp.append([sample[a][0]], sample[a][1]])
-print(new_temp)
+result=[]
+for i in range(3): # M 을 넣어야함
+    sample[i]
+
+test=[[3,1], [3,2], [4,1], [4,2]]
 
 
-# 눈이 너무 아파졌어서 해결 못하겠다... 집중도 안되고 내일 또 하는걸로!
+# 2020 06 12 개어렵다,,, 아직도 풀지 못헀다 내일은 구글링을 해볼 예정이며
+# 구글링 키워드는 이 문제를 풀어가는데 있어서 알아야 할 것 들이며 절대적으로 정답을 구글링 하는 건 없을 예정!
+# 어떤걸 검색해야하는지는 내일 해야겠다... 개졸립다 새벽 1시 14분,,끝
