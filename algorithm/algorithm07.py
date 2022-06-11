@@ -37,7 +37,7 @@ def soultion(list,N,K):
     result.sort(reverse=True)
     # print(result)
     return result[K-1]
-
+######
 N = int(input("몇 장의 카드를 가져올까요? >>> "))
 N = N if 3<=N<=100 else False
 K = int(input("몇 번째 큰 값을 원하시나요? >>> "))
